@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+h1 {
+    font-family: 'Aboreto', cursive;
+    font-size: 60px;
+}
+
+* {
+    font-family: 'Righteous', cursive;
+}
+
+body {
+    background-color: rgba(230, 231, 219)
+    }
+    
+header {
+    background-color: rgba(28, 151, 156);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+a:visited {
+    color: rgb(27, 106, 117);
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 600px 200px 200px;
+
+}
+
+.menu {
+    background-color: rgba(238, 112, 101);
+    width: 200px;
+    height: 580px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.menu-div-item {
+    font-family: 'Righteous', cursive;
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration:  none;
+    border-color: solid black;
+    border-radius: 15px;
+    width: 60px;
+    transition: background-color 1s;
+}
+
+.menu-div-item:hover {
+    background-color: rgba(239, 234, 233, 0.241) ;
+}
+
+form {
+    padding: 10px;
+}
+
+label {
+    padding: 5px;
+}
+
+input {
+    padding: 5px;
+}
+
+.container-edit {
+    margin-top: 80px;
+    flex-direction: column;
+}
+
+.container-content {
+    width: 800px;
+    margin-left: -200px;
+    margin-top: 100px;
+}
+
+input[type=button], input[type=submit] {
+    background-color: rgb(46, 151, 165);
+    padding: 5px;
+    margin: 10px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    font-weight: 600;
+    color: lavender;
+}
+
+
+.container-card {
+    background-color: rgb(215, 230, 244);
+    border: solid rgba(28, 151, 156);
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    padding: 10px;
+}
+
+.container-card-image {
+    padding: auto;
+    margin: auto;
+    width: 280px;
+    height: 250px;
+    border: solid rgba(238, 112, 101);
+    border-radius: 15px;
+}
+
+.div-img {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.img-logo {
+    max-width: 400px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+}

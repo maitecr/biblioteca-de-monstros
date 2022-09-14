@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Monstros</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Biblioteca de Monstros</h1>
+    </header>
+
+    <main class="content">
+        <section class="menu">
+            <div class="menu-div">
+                <nav class="menu-div-leftside">
+                    <ul>
+                        <a href="index.html"> <ul class="menu-div-item">Login</ul> </a>
+                        <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="container-div-login">
+                <h2>Login</h2>
+
+                <form method="POST" action="rotinas/login.php">
+                    <label for="email">E-mail</label>
+                    <input type="email"  name="email" placeholder="Informe e-mail cadastrado" size="50">
+                    <label for="password">Senha</label>
+                    <input type="password" name="senha" placeholder="Digite sua senha">
+                    <input type="submit" name="logar" value="Entrar">
+                    
+                    <div class="container-div-cadastrar">
+                        <h2>Ou</h2>
+                        <a href="cadastrar.html"> <input type="button" value="Cadastre-se"> </a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

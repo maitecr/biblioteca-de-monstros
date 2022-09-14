@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Biblioteca de Monstros</h1>
+    </header>
+
+    <main class="content">
+        <section class="menu">
+            <div class="menu-div">
+                <nav class="menu-div-leftside">
+                    <ul>
+                        <a href="index.html"> <ul class="menu-div-item">Início</ul> </a>
+                        <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
+                        <ul class="menu-div-item">Buscar</ul>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="container-div-login">
+                <h2>Cadastrar</h2> 
+
+                <form method="POST" action="rotinas/cadastrar_usuario.php">
+                    <label for="name">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Informe nome" size="50">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Informe e-mail" size="50">
+                    <label for="password">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Informe senha" size="50">
+                    <label for="password">Confirmar senha</label>
+                    <input type="password" id="confSenha" name="confSenha" placeholder="Confirmar senha" size="50">
+                    <input type="submit" value="Cadastrar" name="cadastrar">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
