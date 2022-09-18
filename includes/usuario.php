@@ -7,7 +7,7 @@
 		$hash_senha = hash("sha256", $senha, false);
 
 		try {
-			$sql = "INSERT INTO tb_usuario (nome, email, senha) VALUES (:nome, :email, :senha)";
+			$sql = "INSERT INTO tb_usuario (nm_usuario, ds_email, ds_senha) VALUES (:nome, :email, :senha)";
 			$stmt = $conn->prepare($sql);
 
 			$stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
@@ -28,7 +28,7 @@
 
 
 		try {
-			$sql = "SELECT id_usuario, nome, email FROM tb_usuario WHERE email = :email AND senha = :senha LIMIT 1";
+			$sql = "SELECT id_usuario, nm_usuario, ds_email FROM tb_usuario WHERE ds_email = :email AND ds_senha = :senha LIMIT 1";
 			$stmt = $conn->prepare($sql);
 
 			$stmt->bindParam(':email', $email, PDO::PARAM_STR);

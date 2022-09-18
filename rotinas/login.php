@@ -18,7 +18,7 @@ session_start();
 //die();
 if (count($verificacao) != 0) {
 	$_SESSION['verificacao'] = $verificacao;
-	header("Location: ../home.html");				
+	header("Location: ../home.php");				
 } else {
 	session_destroy();
 	header("Location: ../index.html");

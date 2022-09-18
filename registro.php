@@ -1,3 +1,8 @@
+<?php
+    require_once 'includes/config.php';
+    require_once 'includes/session.php';
+    require 'includes/monstro.php';
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,11 +23,11 @@
             <div class="menu-div">
                 <nav class="menu-div-leftside">
                     <ul>
-                        <a href="index.html"> <ul class="menu-div-item">Início</ul> </a>
+                        <a href="home.php"> <ul class="menu-div-item">Home</ul> </a>
                         <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
-                        <a href="registro.html"> <ul class="menu-div-item">Registrar</ul> </a>
+                        <a href="registro.php"> <ul class="menu-div-item">Registrar</ul> </a>
                         <a href="editar.html"> <ul class="menu-div-item">Editar</ul> </a>
-                        <ul>Sair</ul>
+                        <a href="rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
                     </ul>
                 </nav>
             </div>
@@ -36,17 +41,27 @@
                <input type="text" id="nome" name="nome" size="50">
                <label for="">Descrição</label>
                <input type="text" name="descricao" id="descricao" size="50">
-                  <label for="tipo"> Tipo</label>
-                  
-                    <select name="tipos">
-                        <option value="marinho">Marinho</option>
-                        <option value="terrestre" selected>Terrestre</option>
-                        <option value="alado">Alado</option>
-                        <option value="espiritural">Espiritual</option>
-                        <option value="berserker">Berserker</option>
-                        <option value="magico">Mágico</option>
-                      </select>
-                 
+               
+               <label for="paises">Origem</label>
+                    <select name="pais" id="pais">
+                    <option value="">Selecione</option>;
+                        
+                    <?php
+                         echo select_paises(); 
+                    ?>
+                   
+                    </select>
+                
+
+                <label for="tipos">Tipo</label>
+                    <select name="tipo" id="tipo">
+                    <option value="">Selecione</option>;
+
+                    <?php 
+                        echo select_tipo(); 
+                    ?>
+
+                    </select>                 
 
                <label for="imagem">Imagem</label>
                <input type="file" name="imagem" id="imagem">

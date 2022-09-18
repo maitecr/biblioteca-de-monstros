@@ -11,7 +11,7 @@ try {
     $dsn_mysql = "mysql:host=".$host.";port=".$port.";dbname=".$dbname;
     $conn = new PDO($dsn_mysql, $user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Estabelecendo conexão com banco de dados";
+//    echo "Estabelecendo conexão com banco de dados";
 } catch (PDOException $e) {
     die('ERROR: ' . $e->getMessage());
 }

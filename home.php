@@ -1,3 +1,7 @@
+<?php
+    require_once 'includes/session.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,7 +23,7 @@
                     <ul>
                         <a href="home.html"> <ul class="menu-div-item">Home</ul> </a>
                         <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
-                        <a href="registro.html"> <ul class="menu-div-item">Registrar</ul> </a>
+                        <a href="registro.php"> <ul class="menu-div-item">Registrar</ul> </a>
                         <a href="editar.html"> <ul class="menu-div-item">Editar</ul> </a>
                         <a href="rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
                     </ul>
