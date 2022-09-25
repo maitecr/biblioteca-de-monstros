@@ -8,5 +8,5 @@ Conexão com banco de dados estabelecida e, até então, possui as funcionalidad
 18.09.2022
 Elaboradas as funções de exibição dos campos de select, no html, com dados do banco de dados; atualizada a função de cadastro de monstros com create efetivado.
 
-25.08.2022 
+25.09.2022 
 Função para exibição dos dados registrados no banco de dados, contudo, ainda não é possível visualizar imagens.
