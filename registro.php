@@ -47,7 +47,7 @@
                     <option value="">Selecione</option>;
                         
                     <?php
-                         echo select_paises(); 
+                         echo html_select_paises(); 
                     ?>
                    
                     </select>
@@ -58,7 +58,7 @@
                     <option value="">Selecione</option>;
 
                     <?php 
-                        echo select_tipo(); 
+                        echo html_select_tipo(); 
                     ?>
 
                     </select>                 

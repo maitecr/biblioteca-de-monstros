@@ -1,3 +1,8 @@
+<?php
+    require_once 'includes/config.php';
+    require_once 'includes/session.php';
+    require 'includes/monstro.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,14 +33,11 @@
         </section>
 
         <section class="container">
-            <div class="container-card">
-                <div class="container-card-image">
+            
+            <?php 
+                echo exibir_card_monstro();
+            ?>
 
-                </div>
-                <div class="container-card-title">
-                    <h3>Monster's name</h3>
-                </div>
-            </div>
         </section>
     </main>
 
