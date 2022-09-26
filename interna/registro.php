@@ -1,7 +1,7 @@
 <?php
-    require_once 'includes/config.php';
-    require_once 'includes/session.php';
-    require 'includes/monstro.php';
+    require_once '../includes/config.php';
+    require_once '../includes/session.php';
+    require '../includes/monstro.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
@@ -24,10 +24,10 @@
                 <nav class="menu-div-leftside">
                     <ul>
                         <a href="home.php"> <ul class="menu-div-item">Home</ul> </a>
-                        <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
+                        <a href="catalogo.php"> <ul class="menu-div-item">Catálogo</ul> </a>
                         <a href="registro.php"> <ul class="menu-div-item">Registrar</ul> </a>
                         <a href="editar.html"> <ul class="menu-div-item">Editar</ul> </a>
-                        <a href="rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
+                        <a href="../rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
                     </ul>
                 </nav>
             </div>
@@ -36,7 +36,7 @@
         <section class="container">
           <div class="container-register">
             <h2>Registrar</h2>
-            <form method="POST" action="rotinas/cadastrar_monstro.php">
+            <form method="POST" action="../rotinas/cadastrar_monstro.php" enctype="multipart/form-data">
                <label for="name">Nome</label>
                <input type="text" id="nome" name="nome" size="50">
                <label for="">Descrição</label>
@@ -51,7 +51,6 @@
                     ?>
                    
                     </select>
-                
 
                 <label for="tipos">Tipo</label>
                     <select name="tipo" id="tipo">
@@ -64,7 +63,8 @@
                     </select>                 
 
                <label for="imagem">Imagem</label>
-               <input type="file" name="imagem" id="imagem">
+               <input type="file" name="imagem[]" multiple="multiple">
+               
                <input type="submit" value="Registrar" name="registrar">
             </form>
             

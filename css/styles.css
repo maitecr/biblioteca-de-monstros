@@ -117,18 +117,14 @@ input[type=button], input[type=submit] {
     margin: auto;
     width: 280px;
     height: 250px;
-    border: solid rgba(238, 112, 101);
     border-radius: 15px;
 }
 
-.div-img {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.img-logo {
-    max-width: 400px;
-    max-height: 350px;
+.card-img {
+    max-width: 295px;
+    max-height: 245px;
     width: auto;
     height: auto;
+    border: solid rgba(238, 112, 101) 3px;
+    border-radius: 15px;
 }

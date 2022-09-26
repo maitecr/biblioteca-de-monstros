@@ -1,7 +1,7 @@
 <?php
-    require_once 'includes/config.php';
-    require_once 'includes/session.php';
-    require 'includes/monstro.php';
+    require_once '../includes/config.php';
+    require_once '../includes/session.php';
+    require '../includes/monstro.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
@@ -23,10 +23,10 @@
                 <nav class="menu-div-leftside">
                     <ul>
                         <a href="home.php"> <ul class="menu-div-item">Home</ul> </a>
-                        <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
+                        <a href="catalogo.php"> <ul class="menu-div-item">Catálogo</ul> </a>
                         <a href="registro.php"> <ul class="menu-div-item">Registrar</ul> </a>
                         <a href="editar.html"> <ul class="menu-div-item">Editar</ul> </a>
-                        <a href="rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
+                        <a href="../rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
                     </ul>
                 </nav>
             </div>

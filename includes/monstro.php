@@ -1,17 +1,18 @@
 <?php
 
     //Função para cadastrar (create) monstros
-    function registrar_monstro($nome, $descricao, $imagem, $tipo, $pais) {
+    function registrar_monstro($nome, $descricao, $tmp_name, $path, $tipo, $pais) {
         global $conn;
         
         try {
-            $sql = "INSERT INTO tb_monstro (nm_monstro, ds_descricao, bn_imagem, nm_tipo, nm_pais)";
-            $sql .= "VALUES (:nome, :descricao, :imagem, :tipo, :pais)";
+            $sql = "INSERT INTO tb_monstro (nm_monstro, ds_descricao, nm_imagem, ds_path, nm_tipo, nm_pais)";
+            $sql .= "VALUES (:nome, :descricao, :tmp_name, :path, :tipo, :pais)";
             $stmt = $conn->prepare($sql);
             
             $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
             $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
-            $stmt->bindParam(':imagem', $imagem, PDO::PARAM_STR);
+            $stmt->bindParam(':tmp_name', $tmp_name, PDO::PARAM_STR);
+            $stmt->bindParam(':path', $path, PDO::PARAM_STR);
             $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
             $stmt->bindParam(':pais', $pais, PDO::PARAM_STR);
            
@@ -72,14 +73,14 @@
 
         if($monstros = bd_select_monstro()) {
             foreach($monstros as $nome => $monstro) {
-                $html .= "<div class= \"container-card\" >\n";
-                $html .= "<div class= \"container-card-image\">\n";
-                $html .= "<img src=\"{$monstro['bn_imagem']}\">\n";               
+                $html .= "<div class=\"container-card\">\n";
+                $html .= "<div class=\"container-card-image\">\n";
+                $html .= "<img class=\"card-img\" src=\"{$monstro['ds_path']}\">\n";               
                 $html .= "</div>\n";
                 $html .= "<div class=\"container-card-info\">\n";
                 $html .= "<h3>{$monstro['nm_monstro']}</h3>\n";
-                $html .= "<h4>Origem:{$monstro['nm_pais']}</h4>\n";
-                $html .= "<h4>Tipo:{$monstro['nm_tipo']}</h4>";
+                $html .= "<h4>Origem: {$monstro['nm_pais']}</h4>\n";
+                $html .= "<h4>Tipo: {$monstro['nm_tipo']}</h4>";
                 $html .= "<h4>Descrição</h4>\n";
                 $html .= "<p>{$monstro['ds_descricao']}</p>\n";
                 $html .= "</div>\n";
@@ -87,12 +88,10 @@
                 $html .= "<br>\n";
             }
         } else {
-            var_dump($monstros);
-            die();
+            die("Erro de exibição");
         }
 
         return $html;
-
     }
 
 

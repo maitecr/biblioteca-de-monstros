@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Biblioteca de Monstros</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
@@ -17,9 +18,8 @@
             <div class="menu-div">
                 <nav class="menu-div-leftside">
                     <ul>
-                        <a href="index.html"> <ul class="menu-div-item">Início</ul> </a>
+                        <a href="index.html"> <ul class="menu-div-item">Login</ul> </a>
                         <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
-                        <ul class="menu-div-item">Buscar</ul>
                     </ul>
                 </nav>
             </div>
@@ -27,18 +27,19 @@
 
         <section class="container">
             <div class="container-div-login">
-                <h2>Cadastrar</h2> 
+                <h2>Login</h2>
 
-                <form method="POST" action="rotinas/cadastrar_usuario.php">
-                    <label for="name">Nome</label>
-                    <input type="text" id="nome" name="nome" placeholder="Informe nome" size="50">
+                <form method="POST" action="../rotinas/login.php">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Informe e-mail" size="50">
+                    <input type="email"  name="email" placeholder="Informe e-mail cadastrado" size="50">
                     <label for="password">Senha</label>
-                    <input type="password" id="senha" name="senha" placeholder="Informe senha" size="50">
-                    <label for="password">Confirmar senha</label>
-                    <input type="password" id="confSenha" name="confSenha" placeholder="Confirmar senha" size="50">
-                    <input type="submit" value="Cadastrar" name="cadastrar">
+                    <input type="password" name="senha" placeholder="Digite sua senha">
+                    <input type="submit" name="logar" value="Entrar">
+                    
+                    <div class="container-div-cadastrar">
+                        <h2>Ou</h2>
+                        <a href="cadastrar.html"> <input type="button" value="Cadastre-se"> </a>
+                    </div>
                 </form>
             </div>
         </section>

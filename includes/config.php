@@ -1,5 +1,8 @@
 <?php
 
+//Pasta de destino para upload de imagens
+$diretorio = './../img';
+
 //Conexão com o banco de dados
 $host = "localhost";
 $user = "root";

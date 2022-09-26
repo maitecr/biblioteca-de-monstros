@@ -20,6 +20,6 @@ if ($senha !== $confSenha) {
 
 echo registrar_usuario($nome, $email, $senha);
 
-header("Location: ../index.html");
+header("Location: ./../externa/index.html");
 
 ?>
