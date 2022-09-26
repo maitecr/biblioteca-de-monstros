@@ -11,5 +11,6 @@ Elaboradas as funções de exibição dos campos de select, no html, com dados d
 
 25.09.2022 
 Função para exibição dos dados registrados no banco de dados, contudo, ainda não é possível visualizar imagens.
-=======
->>>>>>> 16859c3 (Verificação de sessão, páginas internas e externas, create refatorado, read refatorado)
+
+26.09.2022
+Verificação de sessão implementada; páginas internas e externas; create refatorado; exibição dos registros no banco de dados efetivados.
