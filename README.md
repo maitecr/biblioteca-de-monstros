@@ -13,3 +13,6 @@ Função para exibição dos dados registrados no banco de dados, contudo, ainda
 
 26.09.2022
 Verificação de sessão implementada; páginas internas e externas; create refatorado; exibição dos registros no banco de dados efetivados.
+
+27.09.2022
+Incluídas funções de update e delete, assim como páginas web que aplicam as funcionalidades
