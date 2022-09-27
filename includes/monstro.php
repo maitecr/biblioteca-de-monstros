@@ -67,6 +67,46 @@
         }
     }
 
+    //Função para excluir registro por id
+    function bd_delete_monstro($id) {
+        global $conn;
+
+        try {
+            $sql = "DELETE FROM tb_monstro WHERE id_monstro = :id";
+            $stmt = $conn->prepare($sql);
+
+            $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            return $conn->lastInsertId();
+        } catch(PDOException $e) {
+            die( 'ERROR: ' . $e->getMessage());
+        }
+    }
+
+
+    //Função para fazer o update de registros já existentes
+    function bd_update_monstro($id, $nome, $descricao) {
+        global $conn;
+
+        try {
+            $sql = "UPDATE tb_monstro SET nm_monstro = :nome, ds_descricao = :descricao WHERE id_monstro = :id";
+            $stmt = $conn->prepare($sql);
+
+            $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+            $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+            $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
+
+            $stmt->execute();
+
+            return $conn->lastInsertId();
+        } catch(PDOException $e) {
+            die( 'ERROR: ' . $e->getMessage());
+        }
+    }
+
+
     //Exibição dos cards com dados do banco de dados
     function exibir_card_monstro() {
         $html = "<h2>Catálogo</h2>\n";
@@ -94,7 +134,31 @@
         return $html;
     }
 
+    //Exibir tabela de monstros para edição
+    function monstro_tabela() {
+      
+        if($monstros = bd_select_monstro()) {
+            $html = "<table>\n";
+            $html .= "<tr>";              
+            $html .= "<td>Índice</td>\n";     
+            $html .= "<td>Nome</td>\n";     
+            $html .= "<td>Descrição</td>\n";      
+            $html .= "<td colspan=\"2\">Ações</td>\n";  
+            $html .= "</tr>\n";
+        
+            foreach($monstros as $nome => $monstro) {
+               $html .= "<tr>";              
+               $html .= "<td>{$monstro['id_monstro']}</td>\n";     
+               $html .= "<td>{$monstro['nm_monstro']}</td>\n";     
+               $html .= "<td>{$monstro['ds_descricao']}</td>\n";   
+               $html .= "<td> <a href=\"update.php?id={$monstro['id_monstro']}\"> editar </a> </td>\n";     
+               $html .= "<td> <a href=\"./../rotinas/delete.php?id={$monstro['id_monstro']}\"> excluir </a> </td>\n";     
+               $html .= "</tr>\n";
+            }
+            $html .= "</table>\n";
+        }
 
-
+        return $html;
+    }
 
 ?>

@@ -26,7 +26,7 @@
                         <a href="home.php"> <ul class="menu-div-item">Home</ul> </a>
                         <a href="catalogo.php"> <ul class="menu-div-item">Catálogo</ul> </a>
                         <a href="registro.php"> <ul class="menu-div-item">Registrar</ul> </a>
-                        <a href="editar.html"> <ul class="menu-div-item">Editar</ul> </a>
+                        <a href="editar.php"> <ul class="menu-div-item">Editar</ul> </a>
                         <a href="../rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
                     </ul>
                 </nav>
@@ -39,8 +39,10 @@
             <form method="POST" action="../rotinas/cadastrar_monstro.php" enctype="multipart/form-data">
                <label for="name">Nome</label>
                <input type="text" id="nome" name="nome" size="50">
+               <br>
                <label for="">Descrição</label>
                <input type="text" name="descricao" id="descricao" size="50">
+               <br>
                
                <label for="paises">Origem</label>
                     <select name="pais" id="pais">
@@ -51,7 +53,7 @@
                     ?>
                    
                     </select>
-
+                    <br>
                 <label for="tipos">Tipo</label>
                     <select name="tipo" id="tipo">
                     <option value="">Selecione</option>;
@@ -61,7 +63,7 @@
                     ?>
 
                     </select>                 
-
+                <br>
                <label for="imagem">Imagem</label>
                <input type="file" name="imagem[]" multiple="multiple">
                

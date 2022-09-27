@@ -24,7 +24,7 @@
                         <a href="home.php"> <ul class="menu-div-item">Home</ul> </a>
                         <a href="catalogo.php"> <ul class="menu-div-item">Catálogo</ul> </a>
                         <a href="registro.php"> <ul class="menu-div-item">Registrar</ul> </a>
-                        <a href="editar.html"> <ul class="menu-div-item">Editar</ul> </a>
+                        <a href="editar.php"> <ul class="menu-div-item">Editar</ul> </a>
                         <a href="../rotinas/logout.php"> <ul class="menu-div-item">Sair</ul> </a>
                     </ul>
                 </nav>
