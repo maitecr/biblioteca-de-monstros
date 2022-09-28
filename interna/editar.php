@@ -39,7 +39,7 @@
                 <?php
                     echo monstro_tabela();
                 ?>
-
+            </div>
         </section>
     </main>
 

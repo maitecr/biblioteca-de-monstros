@@ -1,5 +1,7 @@
 <?php
+    require_once '../includes/config.php';
     require_once '../includes/session.php';
+    require '../includes/monstro.php';
 
     $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     $url = strstr($url, 'id=');
@@ -39,14 +41,38 @@
             <div class="container-update">
                 <h2>Editar</h2>
                 
-                <form method="POST" action="../rotinas/update_monstro.php?id=<?php echo $id;?>">
+                <form method="POST" action="../rotinas/update_monstro.php?id=<?php echo $id;?>" enctype="multipart/form-data">
                     <label for="name">Nome</label>
                     <input type="text" name="nome" size="50">
                     <br>
                     <label for="">Descrição</label>
                     <input type="text" name="descricao" size="50">
                     <br>
-                    <input type="submit" value="Atualizar" name="atualizar">
+                    
+
+                    <label for="paises">Origem</label>
+                    <select name="pais" id="pais">
+                    <option value="">Selecione</option>;
+                        
+                    <?php
+                         echo html_select_paises(); 
+                    ?>
+                   
+                    </select>
+                    <br>
+                    <label for="tipos">Tipo</label>
+                    <select name="tipo" id="tipo">
+                    <option value="">Selecione</option>;
+
+                    <?php 
+                        echo html_select_tipo(); 
+                    ?>
+
+                    </select>                 
+                <br>
+               <label for="imagem">Imagem</label>
+               <input type="file" name="imagem[]" multiple="multiple">
+               <input type="submit" value="Atualizar" name="atualizar">
                 </form>
     
 

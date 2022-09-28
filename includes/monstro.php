@@ -87,16 +87,20 @@
 
 
     //Função para fazer o update de registros já existentes
-    function bd_update_monstro($id, $nome, $descricao) {
+    function bd_update_monstro($id, $nome, $descricao, $tmp_name, $path, $tipo, $pais) {
         global $conn;
 
         try {
-            $sql = "UPDATE tb_monstro SET nm_monstro = :nome, ds_descricao = :descricao WHERE id_monstro = :id";
+            $sql = "UPDATE tb_monstro SET nm_monstro = :nome, ds_descricao = :descricao, nm_imagem = :tmp_name, ds_path = :path, nm_tipo = :tipo, nm_pais = :pais WHERE id_monstro = :id";
             $stmt = $conn->prepare($sql);
 
             $stmt->bindParam(':id', $id, PDO::PARAM_STR);
             $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
             $stmt->bindParam(':descricao', $descricao, PDO::PARAM_STR);
+            $stmt->bindParam(':tmp_name', $tmp_name, PDO::PARAM_STR);
+            $stmt->bindParam(':path', $path, PDO::PARAM_STR);
+            $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
+            $stmt->bindParam(':pais', $pais, PDO::PARAM_STR);
 
             $stmt->execute();
 
@@ -142,7 +146,10 @@
             $html .= "<tr>";              
             $html .= "<td>Índice</td>\n";     
             $html .= "<td>Nome</td>\n";     
-            $html .= "<td>Descrição</td>\n";      
+            $html .= "<td>Descrição</td>\n";   
+            $html .= "<td>Imagem</td>\n";      
+            $html .= "<td>Tipo</td>\n";     
+            $html .= "<td>País</td>\n";      
             $html .= "<td colspan=\"2\">Ações</td>\n";  
             $html .= "</tr>\n";
         
@@ -150,12 +157,17 @@
                $html .= "<tr>";              
                $html .= "<td>{$monstro['id_monstro']}</td>\n";     
                $html .= "<td>{$monstro['nm_monstro']}</td>\n";     
-               $html .= "<td>{$monstro['ds_descricao']}</td>\n";   
+               $html .= "<td>{$monstro['ds_descricao']}</td>\n";
+               $html .= "<td><img class=\"tb-img\" src=\"{$monstro['ds_path']}\"></td>\n";   
+               $html .= "<td>{$monstro['nm_tipo']}</td>\n";
+               $html .= "<td>{$monstro['nm_pais']}</td>\n";
                $html .= "<td> <a href=\"update.php?id={$monstro['id_monstro']}\"> editar </a> </td>\n";     
                $html .= "<td> <a href=\"./../rotinas/delete.php?id={$monstro['id_monstro']}\"> excluir </a> </td>\n";     
                $html .= "</tr>\n";
             }
             $html .= "</table>\n";
+        } else {
+            $html = "<h3>Lista de monstros vazia <h3>";
         }
 
         return $html;

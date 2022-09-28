@@ -35,7 +35,7 @@ a {
 
 .content {
     display: grid;
-    grid-template-columns: 600px 200px 600px;
+    grid-template-columns: 600px 100px 600px;
 
 }
 
@@ -146,4 +146,11 @@ td {
     text-align: center;
     padding: 5px;
     border: solid rgba(28, 151, 156) 3px;
+}
+
+.tb-img{
+    max-width: 150;
+    max-height: 70px;
+    width: auto;
+    height: auto;
 }
