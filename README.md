@@ -16,3 +16,6 @@ Verificação de sessão implementada; páginas internas e externas; create refa
 
 27.09.2022
 Incluídas funções de update e delete, assim como páginas web que aplicam as funcionalidades
+
+28.09.2022
+Atualização do update
