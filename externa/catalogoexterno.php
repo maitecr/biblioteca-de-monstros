@@ -1,6 +1,5 @@
 <?php
     require_once '../includes/config.php';
-    require_once '../includes/session.php';
     require '../includes/monstro.php';
 ?>
 <!DOCTYPE html>
@@ -23,7 +22,7 @@
                 <nav class="menu-div-leftside">
                     <ul>
                         <a href="index.html"> <ul class="menu-div-item">Login</ul> </a>
-                        <a href="catalogo.html"> <ul class="menu-div-item">Catálogo</ul> </a>
+                        <a href="catalogoexterno.php"> <ul class="menu-div-item">Catálogo</ul> </a>
                     </ul>
                 </nav>
             </div>
