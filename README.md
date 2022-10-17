@@ -1,6 +1,7 @@
 # biblioteca-de-monstros
 
-Projeto em desenvolvimento como atividade avaliativa para a disciplina de "Programação para Internet II".
+Projeto desenvolvido como atividade avaliativa para a disciplina de "Programação para Internet II", cujos objetivos visavam realizar um CRUD com autentificação e verificação de sessão. 
+A atividade foi desenvolvida se utilizando das tecnologicas de HTML, CSS, PHP e banco de dados MySQL, sendo construída numa estrutura modular e usando a extensão PDO.
 
 13.09.2022
 Conexão com banco de dados estabelecida e, até então, possui as funcionalidades de: cadastrar usuário, realizar login e realizar logout.
